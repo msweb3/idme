@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="74px" viewBox="0 0 120 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 31 0 31 30 0 30"></polygon>
+    </defs>
+    <g id="Department-of-the-Treasury-002" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="21" transform="translate(-255.000000, -421.000000)">
+            <g id="Group" transform="translate(153.220771, 390.997963)">
+                <g id="Group-4" transform="translate(102.000000, 30.000000)">
+                    <rect id="Rectangle-7" stroke="#266aca" stroke-width="3" fill-rule="nonzero" x="2.09417683" y="1.57500685" width="103.366022" height="62.7453638" rx="8"></rect>
+                    <g id="Add-Symbol" transform="translate(90.364082, 46.936064)">
+                        <g id="Group">
+                            <ellipse id="Oval" fill="#3AC679" fill-rule="nonzero" cx="14.5" cy="13.5" rx="14.5" ry="13.5"></ellipse>
+                            <g id="Group-3" transform="translate(14.500000, 13.500000) rotate(-270.000000) translate(-14.500000, -13.500000) translate(6.868421, 6.394737)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                                <path d="M15.2631579,7.10526316 L0,7.10526316" id="Line"></path>
+                                <path d="M7.63157895,14.2105263 L7.63157895,0" id="Line-Copy"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <path d="M50.3115872,14.6994188 L92.6874428,14.6994188" id="Line-4" stroke="#266aca" stroke-width="3" stroke-linecap="round" fill-rule="nonzero"></path>
+                    <path d="M50.3115872,24.6994188 L92.6874428,24.6994188" id="Line-4-Copy" stroke="#266aca" stroke-width="3" stroke-linecap="round" fill-rule="nonzero"></path>
+                    <g id="Group-3" transform="translate(11.779229, 12.002037)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M2.21433654,27.7610974 L28.7856635,27.7610974 L28.7856635,24.5149764 C28.7856635,23.7631598 28.1232125,22.7847191 27.4152225,22.4825535 L19.4629651,19.7537111 C18.454702,19.4148541 17.2898983,18.564474 17.4983818,16.4557903 L17.5339592,16.1025444 L17.7645007,15.8334732 C18.7044552,14.7356052 21.146487,11.3794096 21.146487,9.06712391 C21.146487,5.3655963 18.7129938,2.23818317 15.8326486,2.23818317 C13.0014001,2.23818317 10.5180986,5.48142641 10.5180986,9.17863738 C10.5180986,11.4995563 12.8811486,14.7701384 13.7912181,15.8341927 L14.0203365,16.1025444 L14.0559139,16.4557903 C14.2217045,18.137845 13.4119632,19.2997434 11.8280579,19.6587448 L3.59545069,22.8185328 C2.92588427,23.1206983 2.21433654,23.9725173 2.21433654,24.5149764 L2.21433654,27.7610974 Z M31,30 L0,30 L0,24.5149764 C0,22.8717715 1.41882618,21.347994 2.75297817,20.7479796 L11.2979549,17.484592 C11.6914408,17.4047339 11.8465582,17.3227176 11.8650584,16.9924938 C11.0076434,15.9212451 8.30376202,12.2931006 8.30376202,9.17863738 C8.30376202,4.20297849 11.7519223,0 15.8326486,0 C19.9133748,0 23.3608236,4.15261757 23.3608236,9.06712391 C23.3608236,12.2225953 20.5957491,15.8823953 19.6856795,17.0011271 C19.6920835,17.471642 19.8749512,17.533514 20.1681089,17.6313581 L28.2142906,20.3940142 C29.7768495,21.0264035 31,22.8357994 31,24.5149764 L31,30 Z" id="Fill-1" fill="#266aca" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

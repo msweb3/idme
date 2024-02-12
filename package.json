@@ -1,0 +1,36 @@
+{
+  "name": "id",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "start:dev": "nodemon app.js",
+    "tailwind:css": "npx tailwindcss -i ./public/stylesheets/input.css -o ./public/stylesheets/output.css --watch"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^3.1.1",
+    "cookie-parser": "~1.4.4",
+    "csrf": "^3.1.0",
+    "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-useragent": "^1.0.15",
+    "http-errors": "~1.6.3",
+    "mongoose": "^7.4.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
+    "request-ip": "^3.3.0",
+    "socket.io": "^4.7.1",
+    "telegraf": "^4.12.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "ejs": "^3.1.8",
+    "tailwindcss": "^3.2.7"
+  }
+}

